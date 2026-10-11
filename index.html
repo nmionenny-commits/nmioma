@@ -25,7 +25,7 @@
 </main>
 <footer><div class="wrap footer-row"><div><strong>SIRMA MONGOLIA</strong><div class="form-note" style="color:#c5d7ce">Бүтээгдэхүүний танилцуулга ба захиалгын мэдээлэл</div></div><div><a href="#home">Эхлэл ↑</a> · <a href="#products">Бүтээгдэхүүн</a> · <a href="#contact">Холбоо барих</a></div><div class="form-note" style="color:#c5d7ce">© <span id="year"></span> SIRMA Mongolia</div></div></footer>
 <div class="modal-backdrop" id="cartBackdrop" role="dialog" aria-modal="true" aria-labelledby="cartTitle"><div class="modal"><div class="modal-head"><h3 id="cartTitle">Таны сагс</h3><button class="close" type="button" id="closeCart" aria-label="Хаах">×</button></div><div id="cartContents"></div><div class="cart-total"><span>Нийт дүн</span><span id="cartTotal">0₮</span></div><button class="btn full" type="button" id="goToOrder">Захиалгын мэдээлэл бөглөх</button><p class="form-note">Энэ сагс нь тухайн хөтөч дээр ажиллана. Төлбөрийн систем холбогдоогүй.</p></div></div>
-<div class="modal-backdrop" id="confirmBackdrop" role="dialog" aria-modal="true" aria-labelledby="confirmTitle"><div class="modal"><div class="confirm-icon">✓</div><h2 class="confirm-title" id="confirmTitle">Захиалгын мэдээлэл бэлтгэгдлээ!</h2><p class="confirm-copy">Таны захиалгын мэдээлэл амжилттай бэлтгэгдлээ.</p><div class="confirm-warning"><strong>Анхаар:</strong> Захиалга дэлгүүрт хараахан бүртгэгдээгүй байна. Доорх “Имэйл нээж илгээх” товчийг дарж, нээгдсэн имэйл апп дээрээ <strong>Send / Илгээх</strong> товчийг дарснаар захиалгаа илгээнэ.</div><div class="confirm-summary" id="confirmSummary"></div><div style="display:grid;gap:10px;margin-top:16px"><a class="btn full" id="sendOrderEmail" href="mailto:sirmamongolia@gmail.com">Имэйл нээж илгээх ↗</a><button class="btn light full" type="button" id="copyOrderText">Захиалгын мэдээлэл хуулах</button><button class="btn light full" type="button" id="closeConfirm">Хаах</button></div></div></div><div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="modal-backdrop" id="confirmBackdrop" role="dialog" aria-modal="true" aria-labelledby="confirmTitle"><div class="modal"><div class="confirm-icon">✓</div><h2 class="confirm-title" id="confirmTitle">Захиалгын мэдээлэл бэлтгэгдлээ!</h2><p class="confirm-copy">Таны захиалгын мэдээлэл амжилттай бэлтгэгдлээ.</p><div class="confirm-warning" style="background:#edf7ef;border-color:#c9e5d0;color:#245b37;text-align:center"><strong>Сургалтын зориулалттай жишээ захиалга</strong><br>Захиалгын баталгаажуулалтын загвар амжилттай ажиллалаа.</div><p style="text-align:center;font-size:13px;color:var(--muted)">Жишээ захиалгын дугаар: <strong id="demoOrderId">SRM-DEMO-001</strong></p><div class="confirm-summary" id="confirmSummary"></div><div style="display:grid;gap:10px;margin-top:16px"><button class="btn full" type="button" id="finishDemoOrder">Дуусгах ✓</button><button class="btn light full" type="button" id="copyOrderText">Захиалгын мэдээлэл хуулах</button></div></div></div><div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
 (function(){
 'use strict';
@@ -84,10 +84,10 @@ $('orderForm').addEventListener('submit',e=>{
  if(!Object.keys(cart).length){toast('Захиалахын өмнө бүтээгдэхүүнээ сагсанд нэмнэ үү');$('products').scrollIntoView({behavior:'smooth'});return}
  pendingOrderText=orderText();
  $('confirmSummary').textContent=pendingOrderText;
- $('sendOrderEmail').href='mailto:sirmamongolia@gmail.com?subject='+encodeURIComponent('SIRMA Mongolia захиалга')+'&body='+encodeURIComponent(pendingOrderText);
+ $('demoOrderId').textContent='SRM-DEMO-'+String(Date.now()).slice(-6);
  $('confirmBackdrop').classList.add('open');
 });
-$('closeConfirm').addEventListener('click',()=>$('confirmBackdrop').classList.remove('open'));
+$('finishDemoOrder').addEventListener('click',()=>{$('confirmBackdrop').classList.remove('open');Object.keys(cart).forEach(id=>delete cart[id]);renderCart();$('orderForm').reset();toast('Сургалтын жишээ захиалга амжилттай дууслаа')});
 $('confirmBackdrop').addEventListener('click',e=>{if(e.target===$('confirmBackdrop'))$('confirmBackdrop').classList.remove('open')});
 $('copyOrderText').addEventListener('click',async()=>{
  try{await navigator.clipboard.writeText(pendingOrderText);toast('Захиалгын мэдээлэл хуулагдлаа')}
