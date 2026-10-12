@@ -52,4 +52,13 @@ document.addEventListener('click',e=>{const add=e.target.closest('[data-add]');i
 document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('detailModal').classList.remove('show');if((e.key==='Enter'||e.key===' ')&&e.target.classList.contains('product-visual')){e.preventDefault();showDetail(e.target.closest('.product').querySelector('[data-detail]').dataset.detail)}});
 document.getElementById('orderForm').addEventListener('submit',e=>{e.preventDefault();const ids=Object.keys(cart).filter(id=>cart[id]>0);if(!ids.length){alert('Эхлээд сагсандаа бүтээгдэхүүн нэмнэ үү.');return}const f=new FormData(e.target);let total=0;const items=ids.map(id=>{const p=products.find(x=>x.id===id);total+=p.price*cart[id];return `${p.name} — ${cart[id]} ш × ${money(p.price)}`}).join('\n');const msg=`SIRMA MONGOLIA ЗАХИАЛГА\nНэр: ${f.get('customer')}\nУтас: ${f.get('phone')}\nХаяг: ${f.get('address')||'Оруулаагүй'}\n\nБүтээгдэхүүн:\n${items}\n\nНийт: ${money(total)}\n\nЗахиалгыг баталгаажуулна уу.`;const url='https://www.facebook.com/search/top?q=sirma%20mongolia';navigator.clipboard?.writeText(msg).catch(()=>{});window.open(url,'_blank','noopener');alert('Захиалгын мэдээллийг хуулж авахыг оролдлоо. Facebook нээгдсэний дараа мессежид захиалгын мэдээллээ оруулж, борлуулагчтай баталгаажуулна уу.');});
 renderProducts();renderCart();
-</script></body></html>
+</script>
+<style>
+#facebook-float{position:fixed;right:18px;bottom:18px;z-index:9999;display:inline-flex;align-items:center;gap:9px;padding:13px 18px;border-radius:999px;background:#1877f2;color:#fff;text-decoration:none;font:700 15px/1.2 Arial,sans-serif;box-shadow:0 5px 18px rgba(0,0,0,.24);transition:transform .18s,box-shadow .18s}
+#facebook-float:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.3)}
+#facebook-float .fb-mark{display:inline-grid;place-items:center;width:23px;height:23px;border-radius:50%;background:#fff;color:#1877f2;font-size:19px;font-weight:900}
+@media(max-width:480px){#facebook-float{right:12px;bottom:12px;padding:11px 14px;font-size:13px}}
+</style>
+<a id="facebook-float" href="https://www.facebook.com/search/top?q=SIRMA%20Mongolia" target="_blank" rel="noopener noreferrer" aria-label="Facebook дээр SIRMA Mongolia хайх"><span class="fb-mark" aria-hidden="true">f</span><span>Facebook руу орох</span></a>
+
+</body></html>
