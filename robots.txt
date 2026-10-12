@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nmionenny-commits.github.io/nmioma/sitemap.xml
