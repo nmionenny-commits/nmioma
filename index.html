@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIRMA - Турк улсаас импортлогч албан ёсны хуудас</title>
+    <title>SIRMA - Turkey Import Sparkling Water</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #005a36;
             --primary-light: #008751;
-            --accent-gold: #d4af37;
             --bg-light: #f8faf9;
             --card-bg: #ffffff;
             --text-main: #1f2937;
@@ -31,7 +30,6 @@
             line-height: 1.6;
         }
 
-        /* Header */
         header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -39,7 +37,6 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
         .header-container {
@@ -59,7 +56,6 @@
             font-weight: 800;
             color: var(--primary);
             text-decoration: none;
-            letter-spacing: 1px;
         }
 
         nav ul {
@@ -73,140 +69,72 @@
             color: var(--text-main);
             font-weight: 600;
             font-size: 0.95rem;
-            transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: var(--primary);
-        }
-
-        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #003b23 0%, #005a36 100%);
             color: white;
-            padding: 5rem 2rem;
+            padding: 4rem 2rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
 
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
-            position: relative;
-            z-index: 1;
         }
 
         .hero-title {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-size: 2.8rem;
             margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-            font-weight: 300;
         }
 
         .price-badge {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(5px);
+            background: rgba(255, 255, 255, 0.2);
             padding: 0.8rem 2rem;
             border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
             font-size: 1.25rem;
             font-weight: 700;
-            color: #ffffff;
+            margin-top: 1rem;
         }
 
-        /* Main Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
+        }
+
+        .import-banner {
+            background: #e8f5e9;
+            border: 1px solid #a5d6a7;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .import-banner i {
+            font-size: 3rem;
+            color: var(--primary);
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
 
         .section-title h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.25rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .section-title p {
-            color: var(--text-muted);
-            font-size: 1rem;
-        }
-
-        /* Turkey Import Banner */
-        .import-banner {
-            background: linear-gradient(135deg, #e8f5e9 100%, #c8e6c9 0%);
-            border: 1px solid #a5d6a7;
-            border-radius: 20px;
-            padding: 2.5rem;
-            margin-bottom: 4rem;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            box-shadow: 0 4px 15px rgba(0,90,54,0.05);
-        }
-
-        .import-banner i {
-            font-size: 3.5rem;
+            font-size: 2.2rem;
             color: var(--primary);
         }
 
-        .import-banner h3 {
-            color: var(--primary);
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .import-banner p {
-            color: #374151;
-            font-size: 1rem;
-        }
-
-        /* Filter Section */
-        .filter-container {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            background: white;
-            border: 1px solid var(--border-color);
-            padding: 0.6rem 1.5rem;
-            border-radius: 30px;
-            font-weight: 600;
-            color: var(--text-main);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .filter-btn.active, .filter-btn:hover {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-            box-shadow: 0 4px 12px rgba(0, 90, 54, 0.2);
-        }
-
-        /* Product Grid */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
         }
 
@@ -214,82 +142,43 @@
             background: var(--card-bg);
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border: 1px solid var(--border-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-        }
-
-        .product-image {
-            height: 260px;
-            background: #f3f4f6;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            padding: 1.5rem;
-        }
-
-        .badge-tag {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(0, 90, 54, 0.1);
-            color: var(--primary);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .product-details {
             padding: 1.5rem;
             display: flex;
             flex-direction: column;
-            flex-grow: 1;
+        }
+
+        .product-icon {
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 5rem;
         }
 
         .product-title {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
-            color: var(--text-main);
         }
 
         .product-desc {
             color: var(--text-muted);
             font-size: 0.9rem;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
             flex-grow: 1;
         }
 
         .benefits-list {
             list-style: none;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             border-top: 1px solid #f3f4f6;
-            border-bottom: 1px solid #f3f4f6;
-            padding: 0.8rem 0;
+            padding-top: 0.8rem;
         }
 
         .benefits-list li {
             font-size: 0.85rem;
             color: #4b5563;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 0.4rem;
-        }
-
-        .benefits-list li i {
-            color: var(--primary-light);
-            font-size: 0.8rem;
+            margin-bottom: 0.3rem;
         }
 
         .product-footer {
@@ -297,130 +186,59 @@
             justify-content: space-between;
             align-items: center;
             margin-top: auto;
+            border-top: 1px solid var(--border-color);
+            padding-top: 0.8rem;
         }
 
         .product-price {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 800;
             color: var(--primary);
         }
 
-        .volume-info {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        /* Health & Relief Section */
-        .relief-section {
-            background: white;
-            border-radius: 24px;
-            padding: 3rem;
-            margin-top: 4rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-            border: 1px solid var(--border-color);
-        }
-
-        .relief-grid {
+        .relief-grid, .stores-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
         }
 
         .relief-card {
-            background: var(--bg-light);
+            background: white;
             padding: 1.5rem;
             border-radius: 16px;
             border: 1px solid var(--border-color);
-            transition: all 0.3s;
-        }
-
-        .relief-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-3px);
         }
 
         .relief-card i {
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .relief-card h4 {
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .relief-card p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        /* Stores Section */
-        .stores-section {
-            margin-top: 4rem;
-            background: #ffffff;
-            border-radius: 24px;
-            padding: 3rem;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-        }
-
-        .stores-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-            text-align: center;
+            margin-bottom: 0.8rem;
         }
 
         .store-badge {
-            background: var(--bg-light);
-            padding: 1.2rem;
+            background: white;
+            padding: 1rem;
             border-radius: 12px;
             font-weight: 700;
             color: var(--primary);
             border: 1px solid var(--border-color);
-            font-size: 1.1rem;
-        }
-
-        .stores-note {
             text-align: center;
-            margin-top: 1.5rem;
-            color: var(--text-muted);
-            font-size: 0.95rem;
         }
 
-        /* Footer */
         footer {
             background: #002617;
             color: white;
-            padding: 4rem 2rem 2rem 2rem;
-            margin-top: 5rem;
+            padding: 3rem 2rem 1.5rem 2rem;
+            margin-top: 4rem;
         }
 
         .footer-container {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-col h4 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 1.2rem;
-            color: #ffffff;
-        }
-
-        .footer-col p {
-            color: #9ca3af;
-            font-size: 0.9rem;
-            line-height: 1.7;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
         }
 
         .social-links {
@@ -439,33 +257,20 @@
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            transition: background 0.3s ease;
-        }
-
-        .social-btn:hover {
-            background: var(--primary-light);
         }
 
         .footer-bottom {
-            max-width: 1200px;
-            margin: 0 auto;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 1.5rem;
             text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
             font-size: 0.85rem;
             color: #9ca3af;
-        }
-
-        @media (max-width: 768px) {
-            .hero-title { font-size: 2.2rem; }
-            .header-container { flex-direction: column; gap: 1rem; }
-            .import-banner { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <div class="header-container">
             <a href="#" class="logo">
@@ -475,28 +280,23 @@
                 <ul>
                     <li><a href="#products">Бүтээгдэхүүн</a></li>
                     <li><a href="#relief">Ач Тус</a></li>
-                    <li><a href="#stores">Худалдаалц Цэгүүд</a></li>
+                    <li><a href="#stores">Худалдаалах Цэгүүд</a></li>
                     <li><a href="#contact">Холбоо Барих</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1 class="hero-title">Рашаан Мэт Цэнгэг, Жимсний Зөөлөн Амт</h1>
-            <p class="hero-subtitle">Турк улсын Улудаг уулаас гаралтай байгалийн эрдэст ундаагаар биеэ түргэн сэргээж, эрч хүчээ сэлбээрэй!</p>
-            <div class="price-badge">
-                Нэг бүрийн үнэ: ₮3,300 (250мл)
-            </div>
+            <p>Турк улсын Улудаг уулаас гаралтай байгалийн эрдэст ундаагаар биеэ түргэн сэргээж, эрч хүчээ сэлбээрэй!</p>
+            <div class="price-badge">Нэг бүрийн үнэ: ₮3,300 (250мл)</div>
         </div>
     </section>
 
-    <!-- Main Content -->
     <main class="container">
         
-        <!-- Import Banner -->
         <div class="import-banner">
             <i class="fa-solid fa-plane-arrival"></i>
             <div>
@@ -505,28 +305,16 @@
             </div>
         </div>
 
-        <!-- Products Section -->
         <section id="products">
             <div class="section-title">
                 <h2>Манай Бүтээгдэхүүнүүд</h2>
                 <p>Таны эрүүл мэнд, сэргэг байдалд зориулсан 6 төрлийн байгалийн амт</p>
             </div>
 
-            <!-- Filter Buttons -->
-            <div class="filter-container">
-                <button class="filter-btn active" onclick="filterProducts('all')">Бүгд (6)</button>
-                <button class="filter-btn" onclick="filterProducts('natural')">Байгалийн Эрдэст</button>
-                <button class="filter-btn" onclick="filterProducts('flavored')">Жимсний Охьтой</button>
-            </div>
-
-            <!-- Product Grid -->
-            <div class="product-grid" id="productGrid">
-                <!-- Products dynamically inserted via JS -->
-            </div>
+            <div class="product-grid" id="productGrid"></div>
         </section>
 
-        <!-- Relief Section (Хоол шингээх, шарталт гэх мэт) -->
-        <section id="relief" class="relief-section">
+        <section id="relief" style="margin-top: 4rem;">
             <div class="section-title">
                 <h2>Яагаад SIRMA гэж?</h2>
                 <p>Өдөр тутмын ядаргаа, хоолны дараах тавгүйрхлийг хоромхон зуур арилгана</p>
@@ -555,8 +343,7 @@
             </div>
         </section>
 
-        <!-- Stores Section -->
-        <section id="stores" class="stores-section">
+        <section id="stores" style="margin-top: 4rem;">
             <div class="section-title">
                 <h2>Хаанаас Худалдаж Aвах Вэ?</h2>
                 <p>Та өөрт ойр байрлах супермаркет болон үйлчилгээний газруудаас аваарай</p>
@@ -570,31 +357,29 @@
                 <div class="store-badge">OResh</div>
                 <div class="store-badge">Monos</div>
             </div>
-            <p class="stores-note">Мөн Улаанбаатар хотын 20+ паб, ресторан, кофе шоп, фитнесүүдээр худалдаалагдаж байна!</p>
+            <p style="text-align: center; margin-top: 1.5rem; color: var(--text-muted);">Мөн Улаанбаатар хотын 20+ паб, ресторан, кофе шоп, фитнесүүдээр худалдаалагдаж байна!</p>
         </section>
 
     </main>
 
-    <!-- Footer -->
     <footer id="contact">
         <div class="footer-container">
-            <div class="footer-col">
+            <div>
                 <h4>SIRMA Mongolia</h4>
                 <p>Турк улсаас албан ёсны эрхтэйгээр импортлон оруулж ирж буй байгалийн цэвэр эрдэст усыг танд хүргэж байна.</p>
             </div>
-            <div class="footer-col">
+            <div>
                 <h4>Холбоо Барих</h4>
-                <p><i class="fa-solid fa-phone me-2"></i> Утас: +976 7700-0000</p>
-                <p><i class="fa-solid fa-envelope me-2"></i> Мэйл: info@sirma.mn</p>
-                <p><i class="fa-solid fa-location-dot me-2"></i> Хаяг: Улаанбаатар хот, Монгол улс</p>
+                <p><i class="fa-solid fa-phone"></i> Утас: +976 7700-0000</p>
+                <p><i class="fa-solid fa-envelope"></i> Мэйл: info@sirma.mn</p>
+                <p><i class="fa-solid fa-location-dot"></i> Хаяг: Улаанбаатар хот</p>
             </div>
-            <div class="footer-col">
+            <div>
                 <h4>Сошиал Холбоос</h4>
-                <p>Бидэнтэй сошиал хуудсаар холбогдоорой:</p>
                 <div class="social-links">
-                    <a href="https://facebook.com" target="_blank" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://instagram.com" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://tiktok.com" target="_blank" class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://facebook.com" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://tiktok.com" class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
                 </div>
             </div>
         </div>
@@ -603,150 +388,33 @@
         </div>
     </footer>
 
-    <!-- JavaScript logic -->
     <script>
         const products = [
-            {
-                id: 1,
-                name: "Sirma Natural Rich Mineral Water",
-                type: "natural",
-                categoryText: "Цэвэр Эрдэст Ус",
-                volume: "250мл",
-                price: 3300,
-                desc: "Туркийн Улудаг уулаас эх авсан байгалийн гаралтай, эрдэс бодисоор баялаг хийжүүлсэн цэвэр ус.",
-                benefits: [
-                    "Кальци болон Магнигаар баялаг",
-                    "Хоол боловсруулалтыг дэмжинэ",
-                    "Шарталт болон ядаргаа тайлна"
-                ],
-                bg: "#005a36",
-                colorCode: "#2e7d32"
-            },
-            {
-                id: 2,
-                name: "Sirma Mandarin Flavored",
-                type: "flavored",
-                categoryText: "Мандарин Жимст",
-                volume: "250мл",
-                price: 3300,
-                desc: "Сэргэг мандарин жимсний амттай, С витаминаар баяжуулсан эрдэст жимст ус.",
-                benefits: [
-                    "Байгалийн мандарины охьтой",
-                    "Цээж хорсох дарна",
-                    "Сэргээх үйлчилгээтэй"
-                ],
-                bg: "#ef6c00",
-                colorCode: "#f57c00"
-            },
-            {
-                id: 3,
-                name: "Sirma Lemon Flavored",
-                type: "flavored",
-                categoryText: "Нимбэг Жимст",
-                volume: "250мл",
-                price: 3300,
-                desc: "Сонгодог нимбэгийн цэнгэг байгалийн амттай, ангааж сэргээх хийжүүлсэн ус.",
-                benefits: [
-                    "Байгалийн нимбэгийн охь",
-                    "Гэдэс дүүрэхэд нэн тохиромжтой",
-                    "Сэргэг амт"
-                ],
-                bg: "#fbc02d",
-                colorCode: "#fbc02d"
-            },
-            {
-                id: 4,
-                name: "Sirma Black Mulberry & Blackberry",
-                type: "flavored",
-                categoryText: "Нэрс & Бөөрөлзгөнө",
-                volume: "250мл",
-                price: 3300,
-                desc: "Хар яшил болон бөөрөлзгөнө жимсний давтагдашгүй баян амт, антиоксидантын агууламжтай.",
-                benefits: [
-                    "Антиоксидантаар баялаг",
-                    "Хоол шингээлт дэмжинэ",
-                    "С витаминтай"
-                ],
-                bg: "#6a1b9a",
-                colorCode: "#8e24aa"
-            },
-            {
-                id: 5,
-                name: "Sirma Apple Flavored",
-                type: "flavored",
-                categoryText: "Ногоон Алим Жимст",
-                volume: "250мл",
-                price: 3300,
-                desc: "Шинэхийн ногоон алимны исгэлэн ба аагтай амтыг агуулсан эрдэст ус.",
-                benefits: [
-                    "Шинэхийн алимны амт",
-                    "Биеийн эрч хүч сэлбэнэ",
-                    "Хоолны дараа уухад тохиромжтой"
-                ],
-                bg: "#558b2f",
-                colorCode: "#7cb342"
-            },
-            {
-                id: 6,
-                name: "Sirma Mango & Pineapple Flavored",
-                type: "flavored",
-                categoryText: "Манго & Ханборгоцой",
-                volume: "250мл",
-                price: 3300,
-                desc: "Тропик манго ба ханборгоцой жимсний хослол бүхий амттай сэргээх ус.",
-                benefits: [
-                    "Тропик жимсний аагтай амт",
-                    "Витамины баяжуулалттай",
-                    "Мөстэй уухад илүү амттай"
-                ],
-                bg: "#f57f17",
-                colorCode: "#fbc02d"
-            }
+            { name: "Sirma Natural Mineral", text: "Цэвэр Эрдэст Ус", color: "#2e7d32", desc: "Туркийн Улудаг уулын цэвэр эрдэст хийжүүлсэн ус." },
+            { name: "Sirma Mandarin", text: "Мандарин Жимст", color: "#f57c00", desc: "Сэргэг мандарин жимсний амттай, С витаминтай." },
+            { name: "Sirma Lemon", text: "Нимбэг Жимст", color: "#fbc02d", desc: "Сонгодог нимбэгийн амттай, гэдэс дүүрэхэд тохиромжтой." },
+            { name: "Sirma Mulberry & Blackberry", text: "Нэрс & Бөөрөлзгөнө", color: "#8e24aa", desc: "Антиоксидантаар баялаг жимсний баян амт." },
+            { name: "Sirma Apple", text: "Ногоон Алим", color: "#7cb342", desc: "Шинэхийн ногоон алимны исгэлэн ба аагтай амт." },
+            { name: "Sirma Mango & Pineapple", text: "Манго & Ханборгоцой", color: "#fbc02d", desc: "Тропик манго ба ханборгоцой жимсний амттай." }
         ];
 
-        function renderProducts(filter = 'all') {
-            const grid = document.getElementById('productGrid');
-            grid.innerHTML = '';
-
-            const filteredProducts = filter === 'all' 
-                ? products 
-                : products.filter(p => p.type === filter);
-
-            filteredProducts.forEach(product => {
-                const card = document.createElement('div');
-                card.className = 'product-card';
-                card.innerHTML = `
-                    <div class="product-image">
-                        <span class="badge-tag">${product.categoryText}</span>
-                        <i class="fa-solid fa-bottle-water" style="font-size: 8rem; color: ${product.colorCode};"></i>
+        const grid = document.getElementById('productGrid');
+        products.forEach(p => {
+            grid.innerHTML += `
+                <div class="product-card">
+                    <div class="product-icon"><i class="fa-solid fa-bottle-water" style="color: ${p.color};"></i></div>
+                    <div class="product-title">${p.name}</div>
+                    <div class="product-desc">${p.desc}</div>
+                    <ul class="benefits-list">
+                        <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> ${p.text}</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> Бие сэргээнэ</li>
+                    </ul>
+                    <div class="product-footer">
+                        <div class="product-price">₮3,300</div>
+                        <div style="font-size:0.85rem; color:var(--text-muted);">250мл</div>
                     </div>
-                    <div class="product-details">
-                        <h3 class="product-title">${product.name}</h3>
-                        <p class="product-desc">${product.desc}</p>
-                        <ul class="benefits-list">
-                            ${product.benefits.map(b => `<li><i class="fa-solid fa-check"></i> ${b}</li>`).join('')}
-                        </ul>
-                        <div class="product-footer">
-                            <div class="product-price">₮${product.price.toLocaleString()}</div>
-                            <div class="volume-info">${product.volume}</div>
-                        </div>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
-        function filterProducts(type) {
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-            renderProducts(type);
-        }
-
-        // Initial render
-        document.addEventListener('DOMContentLoaded', () => {
-            renderProducts('all');
+                </div>
+            `;
         });
     </script>
 </body>
