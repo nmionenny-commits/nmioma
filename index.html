@@ -90,4 +90,404 @@
         }
 
         .hero-title {
-            font
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-badge {
+            display: inline-block;
+            background: rgba(0, 176, 107, 0.15);
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 0.8rem 2.2rem;
+            border-radius: 50px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .import-banner {
+            background: #121c17;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 4rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .import-banner i {
+            font-size: 3.5rem;
+            color: var(--primary);
+        }
+
+        .import-banner h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .import-banner p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .product-icon {
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 5.5rem;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--text-main);
+        }
+
+        .product-desc {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+        }
+
+        .benefits-list li {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .relief-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .relief-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .relief-card i {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .relief-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .relief-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .stores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .store-badge {
+            background: var(--card-bg);
+            padding: 1.2rem;
+            border-radius: 14px;
+            font-weight: 700;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        footer {
+            background: #060908;
+            color: white;
+            padding: 4rem 2rem 2rem 2rem;
+            margin-top: 6rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .footer-col p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.2rem;
+        }
+
+        .social-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-btn:hover {
+            background: var(--primary);
+            color: #000;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-mountain-sun"></i> SIRMA
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#products">Бүтээгдэхүүн</a></li>
+                    <li><a href="#relief">Ач Тус</a></li>
+                    <li><a href="#stores">Худалдаалах Цэгүүд</a></li>
+                    <li><a href="#contact">Холбоо Барих</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Рашаан Мэт Цэнгэг, Жимсний Зөөлөн Амт</h1>
+            <p>Турк улсын Улудаг уулаас гаралтай байгалийн эрдэст ундаагаар биеэ түргэн сэргээж, эрч хүчээ сэлбээрэй!</p>
+            <div class="price-badge">Нэг бүрийн үнэ: ₮3,300 (250мл)</div>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <div class="import-banner">
+            <i class="fa-solid fa-plane-arrival"></i>
+            <div>
+                <h3>Турк Улсаас Албан Ёсны Эрхтэйгээр Импортлогдов</h3>
+                <p>Байгалийн рашаан болон жимсний охь хосолсон SIRMA брэнд нь Туркийн алдарт Улудаг уулын гүний эрдэст уснаас гарган авсан дээд зэргийн чанартай бүтээгдэхүүн юм.</p>
+            </div>
+        </div>
+
+        <section id="products">
+            <div class="section-title">
+                <h2>Манай Бүтээгдэхүүнүүд</h2>
+                <p>Таны эрүүл мэнд, сэргэг байдалд зориулсан 6 төрлийн байгалийн амт</p>
+            </div>
+
+            <div class="product-grid" id="productGrid"></div>
+        </section>
+
+        <section id="relief" style="margin-top: 5rem;">
+            <div class="section-title">
+                <h2>Яагаад SIRMA гэж?</h2>
+                <p>Өдөр тутмын ядаргаа, хоолны дараах тавгүйрхлийг хоромхон зуур арилгана</p>
+            </div>
+            <div class="relief-grid">
+                <div class="relief-card">
+                    <i class="fa-solid fa-utensils"></i>
+                    <h4>Хоол Шингэц Муудахад</h4>
+                    <p>Хоол шингээлтийг дэмжиж, хүнд орсон хоолыг хоромхон зуур хөнгөлнө.</p>
+                </div>
+                <div class="relief-card">
+                    <i class="fa-solid fa-wind"></i>
+                    <h4>Гэдэс Дүүрэхэд</h4>
+                    <p>Гэдэс дүүрч тавгүйрхэх мэдрэмжийг хурдан хугацаанд тайвшруулна.</p>
+                </div>
+                <div class="relief-card">
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                    <h4>Цээж Хорсоход</h4>
+                    <p>Цээж хорсох, дотор эвгүйрхэх болон бөөлжих мэдрэмжийг нам дарна.</p>
+                </div>
+                <div class="relief-card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h4>Шарталт & Ядаргаа</h4>
+                    <p>Хордлого, шарталтын дараа алдагдсан эрдсийг нөхөж, биеийг түргэн сэргээнэ.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="stores" style="margin-top: 5rem;">
+            <div class="section-title">
+                <h2>Хаанаас Худалдаж Aвах Вэ?</h2>
+                <p>Та өөрт ойр байрлах супермаркет болон үйлчилгээний газруудаас аваарай</p>
+            </div>
+            <div class="stores-grid">
+                <div class="store-badge">Номин</div>
+                <div class="store-badge">Сансар (Carrefour)</div>
+                <div class="store-badge">Emart</div>
+                <div class="store-badge">Оргил</div>
+                <div class="store-badge">EFES</div>
+                <div class="store-badge">OResh</div>
+                <div class="store-badge">Monos</div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; color: var(--text-muted); font-size: 0.95rem;">Мөн Улаанбаатар хотын 20+ паб, ресторан, кофе шоп, фитнесүүдээр худалдаалагдаж байна!</p>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>SIRMA Mongolia</h4>
+                <p>Турк улсаас албан ёсны эрхтэйгээр импортлон оруулж ирж буй байгалийн цэвэр эрдэст усыг танд хүргэж байна.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Холбоо Барих</h4>
+                <p><i class="fa-solid fa-phone"></i> Утас: +976 7700-0000</p>
+                <p><i class="fa-solid fa-envelope"></i> Мэйл: info@sirma.mn</p>
+                <p><i class="fa-solid fa-location-dot"></i> Хаяг: Улаанбаатар хот</p>
+            </div>
+            <div class="footer-col">
+                <h4>Сошиал Холбоос</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/sirmamongolia" class="social-btn" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/sirmamongolia" class="social-btn" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@sirmamongolia" class="social-btn" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 SIRMA Mongolia. Бүх эрх хуулиар хамгаалагдсан.</p>
+        </div>
+    </footer>
+
+    <script>
+        const products = [
+            { name: "Sirma Natural Mineral", text: "Цэвэр Эрдэст Ус", color: "#00b06b", desc: "Туркийн Улудаг уулын цэвэр эрдэст хийжүүлсэн ус." },
+            { name: "Sirma Mandarin", text: "Мандарин Жимст", color: "#f59e0b", desc: "Сэргэг мандарин жимсний амттай, С витаминтай." },
+            { name: "Sirma Lemon", text: "Нимбэг Жимст", color: "#fbbf24", desc: "Сонгодог нимбэгийн амттай, гэдэс дүүрэхэд тохиромжтой." },
+            { name: "Sirma Mulberry & Blackberry", text: "Нэрс & Бөөрөлзгөнө", color: "#c084fc", desc: "Антиоксидантаар баялаг жимсний баян амт." },
+            { name: "Sirma Apple", text: "Ногоон Алим", color: "#84cc16", desc: "Шинэхийн ногоон алимны исгэлэн ба аагтай амт." },
+            { name: "Sirma Mango & Pineapple", text: "Манго & Ханборгоцой", color: "#facc15", desc: "Тропик манго ба ханборгоцой жимсний амттай." }
+        ];
+
+        const grid = document.getElementById('productGrid');
+        products.forEach(p => {
+            grid.innerHTML += `
+                <div class="product-card">
+                    <div class="product-icon"><i class="fa-solid fa-bottle-water" style="color: ${p.color};"></i></div>
+                    <div class="product-title">${p.name}</div>
+                    <div class="product-desc">${p.desc}</div>
+                    <ul class="benefits-list">
+                        <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> ${p.text}</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> Бие сэргээнэ</li>
+                    </ul>
+                    <div class="product-footer">
+                        <div class="product-price">₮3,300</div>
+                        <div style="font-size:0.85rem; color
