@@ -178,7 +178,7 @@
             overflow: hidden;
             box-shadow: 0 8px 25px rgba(0,0,0,0.4);
             border: 1px solid var(--border-color);
-            padding: 0; /* padding-ыг устгаж зургийг карт дотор багтаана */
+            padding: 0;
             display: flex;
             flex-direction: column;
             transition: transform 0.3s ease, border-color 0.3s ease;
@@ -196,7 +196,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            padding: 1rem; /* Зураг ба хананы хооронд зай үлдээнэ */
+            padding: 1rem;
         }
 
         .product-image img {
@@ -210,7 +210,7 @@
             position: absolute;
             top: 1rem;
             right: 1rem;
-            background: rgba(0, 176, 107, 0.1);
+            background: rgba(0, 176, 107, 0.2);
             color: var(--primary);
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
@@ -227,7 +227,7 @@
         }
 
         .product-title {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 700;
             margin-bottom: 0.8rem;
             color: var(--text-main);
@@ -445,7 +445,7 @@
             </div>
 
             <div class="product-grid" id="productGrid">
-                <!-- Бүтээгдэхүүнүүд динамикаар энд нэмэгдэнэ -->
+                <!-- Бүтээгдэхүүнүүд динамикаар орно -->
             </div>
         </section>
 
@@ -521,41 +521,3 @@
         <div class="footer-bottom">
             <p>© 2026 SIRMA Mongolia. Бүх эрх хуулиар хамгаалагдсан.</p>
         </div>
-    </footer>
-
-    <script>
-        const products = [
-            { name: "Sirma Natural Mineral Water", text: "Цэвэр Эрдэст Ус", desc: "Туркийн Улудаг уулын цэвэр эрдэст хийжүүлсэн ус." },
-            { name: "Sirma Mandarin Flavored Water", text: "Мандарин Жимст", desc: "Сэргэг мандарин жимсний амттай, С витаминтай." },
-            { name: "Sirma Lemon Flavored Water", text: "Нимбэг Жимст", desc: "Сонгодог нимбэгийн амттай, гэдэс дүүрэхэд тохиромжтой." },
-            { name: "Sirma Black Mulberry & Blackberry Flavored Water", text: "Нэрс & Бөөрөлзгөнө", desc: "Антиоксидантаар баялаг жимсний баян амт." },
-            { name: "Sirma Apple Flavored Water", text: "Ногоон Алим", desc: "Шинэхийн ногоон алимны исгэлэн ба аагтай амт." },
-            { name: "Sirma Mango & Pineapple Flavored Water", text: "Манго & Ханборгоцой", desc: "Тропик манго ба ханборгоцой жимсний амттай." }
-        ];
-
-        const grid = document.getElementById('productGrid');
-        products.forEach(p => {
-            grid.innerHTML += `
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="image_1.png" alt="${p.name}">
-                        <span class="badge-tag">${p.text}</span>
-                    </div>
-                    <div class="product-details">
-                        <div class="product-title">${p.name}</div>
-                        <div class="product-desc">${p.desc}</div>
-                        <ul class="benefits-list">
-                            <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> Хоол шингээлт дэмжинэ</li>
-                            <li><i class="fa-solid fa-check" style="color: var(--primary);"></i> Бие сэргээнэ</li>
-                        </ul>
-                        <div class="product-footer">
-                            <div class="product-price">₮3,300</div>
-                            <div class="volume-info">250мл</div>
-                        </div>
-                    </div>
-                </div>
-            `;
-        });
-    </script>
-</body>
-</html>
